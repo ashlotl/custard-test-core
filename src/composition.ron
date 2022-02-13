@@ -1,0 +1,8 @@
+UnloadedComposition(
+	crates: {},
+	children: [//uncomment to test composition cycle error
+		// CrateName(
+		// 	name: "custard-core"
+		// )
+	],
+)
