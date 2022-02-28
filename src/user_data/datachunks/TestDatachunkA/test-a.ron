@@ -1,0 +1,5 @@
+TestDatachunkA(
+	field_a: true,
+	field_b: 69,
+	field_c: "honk"
+)

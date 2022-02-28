@@ -1,5 +1,15 @@
 UnloadedComposition(
-	crates: {},
+	crates: {
+		CrateName( name: "custard-basics-test-a"): UnloadedCrate(
+			datachunks: {
+				DatachunkName( name: "test-a"): UnloadedDatachunk(
+					type_name: "TestDatachunkA",
+					deserialize_path: "user_data/datachunks/TestDatachunkA/test-a.ron",
+				)
+			},
+			tasks: {},
+		),
+	},
 	children: [//uncomment to test composition cycle error
 		// CrateName(
 		// 	name: "custard-core"

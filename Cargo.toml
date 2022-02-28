@@ -11,6 +11,7 @@ crate-type = ["dylib"]
 
 
 [dependencies]
+custard-macros = {path="../custard-macros"}
 custard-use = {path="../custard-use"}
 lazy_static = {version = "1.4.0"}
 # Here go all the crates that should submit Tasks and Datachunks.
