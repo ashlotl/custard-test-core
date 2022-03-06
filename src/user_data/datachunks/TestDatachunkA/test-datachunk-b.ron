@@ -1,0 +1,5 @@
+TestDatachunkA(
+	field_a: false,
+	field_b: 420,
+	field_c: "blaze it"
+)
