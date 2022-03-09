@@ -9,7 +9,7 @@ UnloadedComposition(
 			},
 			tasks: {
 				TaskName( name: "test-task-a"): UnloadedTask(
-					type_name: "TestTaskA",
+					type_name: "TestTaskAImpl",
 					deserialize_path: "user_data/tasks/TestTaskA/test-task-a.ron",
 
 					parents: [
@@ -22,7 +22,7 @@ UnloadedComposition(
 						Access(
 							of: FullDatachunkName(
 								crate_name: CrateName( name: "custard-basics-test-a" ),
-								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-b" ),
 							),
 							mut_immut: MutableAccess,
 						)
@@ -30,7 +30,7 @@ UnloadedComposition(
 					entrypoint: true,
 				),
 				TaskName( name: "test-task-b"): UnloadedTask(
-					type_name: "TestTaskA",
+					type_name: "TestTaskAImpl",
 					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
 
 					parents: [

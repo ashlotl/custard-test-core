@@ -1,0 +1,271 @@
+UnloadedComposition(
+	crates: {
+		CrateName( name: "custard-basics-test-a"): UnloadedCrate(
+			datachunks: {
+				DatachunkName( name: "test-datachunk-a"): UnloadedDatachunk(
+					type_name: "TestDatachunkA",
+					deserialize_path: "user_data/datachunks/TestDatachunkA/test-datachunk-a.ron",
+				)
+			},
+			tasks: {
+				TaskName( name: "test-task-a"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-a.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-l" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: true,
+				),
+				TaskName( name: "test-task-b"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-a" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-c"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-b" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-d"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-c" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-e"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-d" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-f"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-e" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-g"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-a.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-f" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: true,
+				),
+				TaskName( name: "test-task-h"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-g" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-i"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-h" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-j"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-i" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-k"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-j" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				),
+				TaskName( name: "test-task-l"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-k" ),
+						)
+					],
+					accesses: [
+						Access(
+							of: FullDatachunkName(
+								crate_name: CrateName( name: "custard-basics-test-a" ),
+								datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+							),
+							mut_immut: MutableAccess,
+						)
+					],
+					entrypoint: false,
+				)
+			},
+		),
+	},
+	children: [//uncomment to test composition cycle error
+		// CrateName(
+		// 	name: "custard-core"
+		// )
+	],
+)

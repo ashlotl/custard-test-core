@@ -1,4 +1,4 @@
-TestTaskA (
+TestTaskAData (
 	counter: 0,
 	funny_string: "item is fullheld",
 )
