@@ -9,13 +9,17 @@ UnloadedComposition(
 			},
 			tasks: {
 				TaskName( name: "test-task-a"): UnloadedTask(
-					type_name: "TestTaskAImpl",
+					type_name: "TestTaskA",
 					deserialize_path: "user_data/tasks/TestTaskA/test-task-a.ron",
 
 					parents: [
 						FullTaskName(
 							crate_name: CrateName( name: "custard-basics-test-a" ),
 							task_name: TaskName( name: "test-task-b" ),
+						),
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-c" ),
 						)
 					],
 					accesses: [
@@ -30,7 +34,7 @@ UnloadedComposition(
 					entrypoint: true,
 				),
 				TaskName( name: "test-task-b"): UnloadedTask(
-					type_name: "TestTaskAImpl",
+					type_name: "TestTaskA",
 					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
 
 					parents: [
@@ -49,7 +53,28 @@ UnloadedComposition(
 						)
 					],
 					entrypoint: false,
-				)
+				),
+				TaskName( name: "test-task-c"): UnloadedTask(
+					type_name: "TestTaskA",
+					deserialize_path: "user_data/tasks/TestTaskA/test-task-b.ron",
+
+					parents: [
+						FullTaskName(
+							crate_name: CrateName( name: "custard-basics-test-a" ),
+							task_name: TaskName( name: "test-task-a" ),
+						)
+					],
+					accesses: [
+						// Access(
+						// 	of: FullDatachunkName(
+						// 		crate_name: CrateName( name: "custard-basics-test-a" ),
+						// 		datachunk_name: DatachunkName( name: "test-datachunk-a" ),
+						// 	),
+						// 	mut_immut: MutableAccess,
+						// )
+					],
+					entrypoint: false,
+				),
 			},
 		),
 	},
